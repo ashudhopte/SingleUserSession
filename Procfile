@@ -1,1 +1,0 @@
-web: java -jar target/single-user-session-spring-1.0.0.jar
