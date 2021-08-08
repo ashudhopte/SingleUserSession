@@ -1,0 +1,28 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <h2>LOGIN WITH EMAIL</h2>
+    </div>
+
+    <div class="row">
+        <p>Enter Email</p><br/>
+        <input class="form-control" type="text" placeholder="Email" name="email" [(ngModel)]="userDto.email" /><br/>
+        <button class="submit-button" type="submit" (click)="sendLoginCodeButton($event.target)" >Send 4 Digit Code</button><br/>
+        <p class="msg" *ngIf="showSendEmailMessage">{{userDto.message}}</p>
+    </div>
+
+    <div  class="row" *ngIf="loginButtonShow">
+        <p>Enter 4 Digit Login Code</p><br/>
+        <input class="form-control" type="number" placeholder="4 Digit Code" name="loginCode" [(ngModel)]="userDto.loginCode" />
+        <button type="submit" class="submit-button" (click)="checkCode($event.target)" >Login</button>
+        <p *ngIf="showSessionActiveMessage" class="msg">{{userDto.message}}</p>
+    </div>
+
+    <div *ngIf="showNewSession" class="row">
+        <button type="submit" class="submit-button" (click)="removeSessionAndNewLogin()" >Logout other session and Login</button>
+        <p *ngIf="showRemoveSessionMsg" class="msg">{{userDto.message}</p>
+    </div>
+    
+    <br/>
+    <p *ngIf="showSessionMsg" class="msg">{{sessionMsg}}</p>
+</div>

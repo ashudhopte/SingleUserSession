@@ -1,0 +1,40 @@
+.container-fluid{
+    padding: 10px;
+    max-width: 400px;
+    background-color: whitesmoke;
+    margin-top: 50px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.row{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+    color: darkred;
+    font-weight: bold;
+}
+
+p{
+    color: darkred;
+    font-weight: bold;
+    text-align: start;
+    margin: 10px;
+}
+
+.submit-button{
+    background-color: darkred;
+    color: whitesmoke;
+    width: 100%;
+    border-radius: 5px;
+    border: 0;
+    font-size: large;
+    text-align: center;
+    height: min-content;
+    cursor: pointer;
+}

@@ -1,0 +1,9 @@
+<div class="container-fluid">
+    <div class="row">
+        <h2>Thank You For Logging In!</h2>
+    </div>
+    <div class="row">
+        <button type="submit" class="submit-button" (click)="logoutUser()">Logout</button>
+        <p *ngIf="showLogoutMessage" class="msg">{{userDto.message}</p>
+    </div>
+</div>
